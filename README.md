@@ -5,8 +5,8 @@ This repo contains configuration files for my [Hyprland](https://hyprland.org) +
 ## Current config status
 
 ### Legend:
-- **Complete** - I have made all currently planned changes
-- **WIP** - There are still some changes/additions planned
+- ✅️**Complete** - I have made all currently planned changes
+- ⚠️**WIP** - There are still some changes/additions planned
 
 When I complete/plan modifications I will update statuses accordingly.
 
@@ -16,17 +16,17 @@ When I complete/plan modifications I will update statuses accordingly.
 | btop      | ✅️ Complete   |
 | fish      | ✅️ Complete   |
 | gitui     | ✅️ Complete   |
-| hypr      | ⚠️W WIP        |
-| kitty     | ⚠️W WIP        |
-| mako      | ⚠️  WIP        |
-| qt5ct     | ⚠️  WIP        |
+| hypr      | ⚠️ WIP         |
+| kitty     | ⚠️ WIP         |
+| mako      | ⚠️ WIP         |
+| qt5ct     | ⚠️ WIP         |
 | rofi      | ✅️ Complete   |
-| starship  | ⚠️  WIP        |
+| starship  | ⚠️ WIP         |
 | swaylock* | ✅️ Complete   |
-| waybar    | ⚠️  WIP        |
+| waybar    | ⚠️ WIP         |
 | zellij    | ✅️ Complete   |
 
-* [swaylock config](https://github.com/remiposo/swaylock) by [remiposo](https://github.com/remiposo)
+* - [swaylock config](https://github.com/remiposo/swaylock) by [remiposo](https://github.com/remiposo)
 
 ## Future plans
 
