@@ -1,0 +1,20 @@
+# Ignore root dir
+/*
+
+# And include only explicitly specified dirs and files
+!.gitignore
+!README.md
+
+!/bat/
+!/btop/
+!/fish/
+!/gitui/
+!/hypr/
+!/kitty/
+!/mako/
+!/qt5ct/
+!/rofi/
+!starship.toml
+!/swaylock/
+!/waybar/
+!/zellij/

@@ -1,0 +1,14 @@
+// Modified to match Catppuccin Mocha theme
+
+* {
+    BG:    #1E1E2Eff; // Default: #1E1D2Fff;
+    BGA:   #A6E3A1ff; // Default: #89DCEBff;
+    FG:    #CDD6F4ff; // Default: #D9E0EEff;
+    FGA:   #F38BA8ff; // Default: #F28FADff;
+    BDR:   #A6E3A1ff; // Default: #96CDFBff;
+    SEL:   #1E1E2Eff;
+    UGT:   #F38BA8ff; // Default: #F28FADff;
+    IMG:   #F9E2AFff; // Default: #FAE3B0ff;
+    OFF:   #45475Aff; // Default: #575268ff;
+    ON:    #A6E3A1ff; // Default: #ABE9B3ff;
+}
