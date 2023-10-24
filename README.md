@@ -5,8 +5,8 @@ This repo contains configuration files for my [Hyprland](https://hyprland.org) +
 ## Current config status
 
 ### Legend:
-- ✅️**Complete** - I have made all currently planned changes
-- ⚠️**WIP** - There are still some changes/additions planned
+- ✅️ **Complete** - I have made all currently planned changes
+- ⚠️ **WIP** - There are still some changes/additions planned
 
 When I complete/plan modifications I will update statuses accordingly.
 
@@ -26,7 +26,7 @@ When I complete/plan modifications I will update statuses accordingly.
 | waybar    | ⚠️ WIP         |
 | zellij    | ✅️ Complete   |
 
-* - [swaylock config](https://github.com/remiposo/swaylock) by [remiposo](https://github.com/remiposo)
+\* \- [swaylock config](https://github.com/remiposo/swaylock) by [remiposo](https://github.com/remiposo)
 
 ## Future plans
 
