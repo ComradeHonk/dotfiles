@@ -1,6 +1,26 @@
 # ComradeHonk's dotfiles
 
-This repo contains configuration files for my [Hyprland](https://hyprland.org) + [Catppuccin](https://github.com/catppuccin/catppuccin) ricing project and other useful configs. You may use my configuration, but in the current state it's mostly copied from Catppuccin's GitHub.
+## Introduction
+
+This repo contains configuration files for my [Hyprland](https://hyprland.org) ricing project using [Catppuccin](https://github.com/catppuccin/catppuccin) Mocha theme. You may use my configuration, but in the current state it's mostly copied from Catppuccin's GitHub.
+
+## Catppuccin theme configs
+
+State of the theme configs for each package. Most packages didn't need modifications to the default Catppuccin Mocha theme configuration (config repos linked with each package), but changes to ones that needed and other useful info are detailed in this list.
+
+- [bat](https://github.com/catppuccin/bat) - Default config (deleted unused theme files)
+- [btop](https://github.com/catppuccin/btop) - Default config (deleted unused theme files)
+- [fish](https://github.com/catppuccin/fish) - Default config (deleted unused theme files)
+- [gitui](https://github.com/catppuccin/gitui) - Default config (deleted unused theme files)
+- [hypr](https://github.com/catppuccin/hyprland) - Default config, applied manually in `hyprland.conf`
+- [kitty](https://github.com/catppuccin/kitty) - Default config
+- [mako](https://github.com/catppuccin/mako) - Default config (to be modified)
+- [qt5ct](https://github.com/catppuccin/qt5ct) - Default config (to be modified)
+- [rofi](https://github.com/catppuccin/rofi) - Deathemonic version. I'm using only the launcher, because I dont't need a runner, power menu or screenshot tool. I also had some problems with icons in those modules. I modified colors in `colors.rasi` to exactly match Catppuccin Mocha colors.
+- [starship](https://github.com/catppuccin/starship) - Default config
+- [swaylock](https://github.com/remiposo/swaylock) - Default config by [remiposo](https://github.com/remiposo). Labeled as WIP
+- [waybar](https://github.com/catppuccin/waybar) - Default config, applied manually in `style.css`
+- [zellij](https://github.com/catppuccin/zellij) - Default config
 
 ## Current config status
 
@@ -8,7 +28,7 @@ This repo contains configuration files for my [Hyprland](https://hyprland.org) +
 - ✅️ **Complete** - I have made all currently planned changes
 - ⚠️ **WIP** - There are still some changes/additions planned
 
-When I complete/plan modifications I will update statuses accordingly.
+When I complete modifications or plan new ones, I will update statuses accordingly.
 
 | Package   | Config status |
 |-----------|---------------|
@@ -26,11 +46,11 @@ When I complete/plan modifications I will update statuses accordingly.
 | waybar    | ⚠️ WIP         |
 | zellij    | ✅️ Complete   |
 
-\* \- [swaylock config](https://github.com/remiposo/swaylock) by [remiposo](https://github.com/remiposo)
+\* \- [swaylock config](https://github.com/remiposo/swaylock) by [remiposo](https://github.com/remiposo) is labeled as **WIP**
 
 ## Future plans
 
-I'm planning to add more package configs in the future. When the rice reaches a satisfactory state I will add screenshots of the progress.
+I'm planning to add more package configs in the future. When the project reaches a satisfactory state I will add screenshots of the progress.
 
 ## Credits
 - [Catppuccin project](https://github.com/catppuccin/catppuccin)
