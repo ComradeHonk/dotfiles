@@ -16,5 +16,6 @@
 !/rofi/
 !starship.toml
 !/swaylock/
+!/swayidle/
 !/waybar/
 !/zellij/
