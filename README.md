@@ -43,6 +43,7 @@ When I complete modifications or plan new ones, I will update statuses according
 | rofi      | ✅️ Complete   |
 | starship  | ⚠️ WIP         |
 | swaylock* | ✅️ Complete   |
+| swayidle  | ✅️ Complete   |
 | waybar    | ⚠️ WIP         |
 | zellij    | ✅️ Complete   |
 
