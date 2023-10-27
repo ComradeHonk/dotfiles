@@ -1,299 +1,164 @@
 @import "mocha.css";
 
+/* Global */
 * {
-    /* Ignore GTK theme */
-    all: initial;
-    /* `otf-font-awesome` is required to be installed for icons */
-    /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
-    font-family: FiraCodeNerdFont, sans-serif;
-    font-size: 13px;
+  font-family: "FiraCode Nerd Font";
+  font-size: .9rem;
+}
+
+@keyframes blink_red {
+  to {
+    background-color: @red;
+    color: @text;
+  }
+}
+
+.warning, .critical, .urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#mode, #clock, #memory, #temperature, #cpu,
+#mpd, #idle_inhibitor, #backlight, #pulseaudio, #network, 
+#battery, #custom-media, #scratchpad, #disk {
+  padding: 0 .6rem 0 .6rem;
+  background-color: @surface0;
+}
+
+#clock, #idle_inhibitor {
+  border-radius: 1.2rem;
+}
+
+#cpu, #pulseaudio {
+  border-radius: 1.2rem 0 0 1.2rem;
+}
+
+#temperature, #battery {
+  border-radius: 0 1.2rem 1.2rem 0;
+}
+
+/* Bar */
+/* Ignore Catppuccin GTK theme that's breaking the bar */
+window {
+  all: initial;
 }
 
 window#waybar {
-    background-color: shade(@base, 0.9);
-    border: 2px solid alpha(@crust, 0.3);
-    color: @text;
-    transition-property: background-color;
-    transition-duration: .5s;
+  background-color: shade(@base, 0.9);
+  border: 2px solid alpha(@crust, 0.3);
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
+/* window > box {
+  margin: .3rem;
+  margin-bottom: 0;
+} */
 
 
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-
-*/
-
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px @green;
+/* Workspaces */
+#workspaces {
+  background-color: @surface0;
+  border-radius: 1.2rem;
+  margin-left: .6rem;
 }
 
 #workspaces button {
-    padding: 0 10px;
-    background-color: transparent;
-    color: @text;
-}
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+  color: @text;
+  background-color: transparent;
+  padding: .1rem .6rem .1rem .6rem;
+  border-radius: 1.2rem;
 }
 
 #workspaces button.active {
-    background-color: @surface1;
-    box-shadow: inset 0 -3px @green;
+  background-color: @green;
+  color: @base;
 }
 
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#mpd {
-    padding: 0 10px;
-    color: @text;
-    background-color: @surface0;
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-#clock {
-    color: @lavender;
-    border-radius: 15px;
-}
-
-#battery {
-    color: @rosewater;
-    border-radius: 0 15px 15px 0;
-    margin: 0 4px 0 -4px;
-    padding-right: 20px;
-}
-
-#battery.charging, #battery.plugged {
-    color: @yellow;
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-#battery.critical:not(.charging) {
-    color: @red;
-    background-color: @overlay0;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-#cpu {
-    color: @blue;
-    border-radius: 15px 0 0 15px;
-}
-
-#memory {
-    color: @green;
-    margin: 0 -4px 0 -4px;
-}
-
-#disk {
-    background-color: @maroon;
-}
-
-#backlight {
-    color: @pink;
-}
-
-#network {
-    color: @teal;
-    margin: 0 -4px 0 -4px;
-}
-
-#network.disconnected {
-    background-color: @surface1;
-}
-
-#pulseaudio {
-    color: @peach;
-    border-radius: 15px 0 0 15px;
-}
-
-#pulseaudio.muted {
-    background-color: @surface1;
-}
-
-#wireplumber {
-    color: @peach;
-}
-
-#wireplumber.muted {
-    background-color: @surface1;
-}
-
-#custom-media {
-    color: @text;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    color: @green;
-}
-
-#custom-media.custom-vlc {
-    color: @peach;
-}
-
-#temperature {
-    color: @yellow;
-    border-radius: 0 15px 15px 0;
-    margin-left: -4px;
-}
-
-#temperature.critical {
-    color: @red;
-    background-color: @overlay0;
-}
-
-#tray {
-    color: @text;
-    background-color: transparent;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: @overlay0;
-}
-
-#idle_inhibitor {
-    background-color: @surface0;
-    border-radius: 15px;
-    padding-right: 15px;
-}
-
-#idle_inhibitor.activated {
-    background-color: @text;
-    color: @base;
-}
-
-#mpd {
-    color: @sapphire;
-}
-
-#mpd.disconnected {
-    background-color: @surface1;
-}
-
-#mpd.stopped {
-    color: @red;
-}
-
-#mpd.paused {
-    color: @yellow;
-}
-
-#language {
-    color: @mauve;
-    background-color: @surface0;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    color: @text;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-    background-color: transparent;
-}
-
+/* Tooltip */
 tooltip {
-    background-color: @base;
-    border: 3px solid @surface0;
-    border-radius: 15px;
+  background-color: @base;
+}
+
+tooltip label {
+  color: @rosewater;
+}
+
+/* battery */
+#battery {
+  color: @mauve;
+  margin-right: .6rem;
+  padding-right: 1.2rem;
+}
+#battery.full {
+  color: @green;
+}
+#battery.charging{
+  color: @yellow;
+}
+#battery.discharging {
+  color: @peach;
+}
+#battery.critical:not(.charging) {
+  color: @red;
+}
+
+/* mpd */
+#mpd.paused {
+  font-style: italic;
+}
+#mpd.stopped {
+  color: @subtext0;
+}
+#mpd {
+  color: @pink;
+}
+
+/* Extra */
+#memory {
+  color: @green;
+}
+#cpu {
+  color: @sapphire;
+}
+#clock {
+  color: @lavender;
+}
+#idle_inhibitor {
+  color: @text;
+  margin-right: .6rem;
+  padding: 0 1.1rem 0 .7rem;
+}
+#idle_inhibitor.activated {
+  background-color: @text;
+  color: @base;
+}
+#temperature {
+  color: @yellow;
+  margin-right: .6rem;
+}
+#pulseaudio {
+  color: @maroon;
+}
+#network {
+  color: @blue;
+}
+#network.disconnected {
+  color: @subtext0;
+}
+#tray {
+  margin-right: .6rem;
+  padding: 0 .6rem 0 .6rem;
+}
+#disk {
+  color: @peach;
+}
+#custom-media {
+  color: @text;
+}
+#custom-media.custom-spotify {
+  color: @green;
 }
