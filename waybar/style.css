@@ -212,6 +212,7 @@ label:focus {
 
 #tray {
     color: @text;
+    background-color: transparent;
 }
 
 #tray > .passive {
