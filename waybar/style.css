@@ -56,9 +56,9 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 10px;
     background-color: transparent;
-    color: #ffffff;
+    color: @text;
 }
 
 #workspaces button:hover {
@@ -277,5 +277,10 @@ label:focus {
 }
 
 #scratchpad.empty {
-	background-color: transparent;
+    background-color: transparent;
+}
+
+tooltip {
+    background-color: @base;
+    border: 3px solid @surface0;
 }
