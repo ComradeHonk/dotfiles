@@ -117,10 +117,14 @@ button:hover {
 
 #clock {
     color: @lavender;
+    border-radius: 15px;
 }
 
 #battery {
     color: @rosewater;
+    border-radius: 0 15px 15px 0;
+    margin: 0 4px 0 -4px;
+    padding-right: 20px;
 }
 
 #battery.charging, #battery.plugged {
@@ -150,10 +154,12 @@ label:focus {
 
 #cpu {
     color: @blue;
+    border-radius: 15px 0 0 15px;
 }
 
 #memory {
     color: @green;
+    margin: 0 -4px 0 -4px;
 }
 
 #disk {
@@ -166,6 +172,7 @@ label:focus {
 
 #network {
     color: @teal;
+    margin: 0 -4px 0 -4px;
 }
 
 #network.disconnected {
@@ -174,6 +181,7 @@ label:focus {
 
 #pulseaudio {
     color: @peach;
+    border-radius: 15px 0 0 15px;
 }
 
 #pulseaudio.muted {
@@ -203,6 +211,8 @@ label:focus {
 
 #temperature {
     color: @yellow;
+    border-radius: 0 15px 15px 0;
+    margin-left: -4px;
 }
 
 #temperature.critical {
@@ -226,6 +236,8 @@ label:focus {
 
 #idle_inhibitor {
     background-color: @surface0;
+    border-radius: 15px;
+    padding-right: 15px;
 }
 
 #idle_inhibitor.activated {
@@ -283,4 +295,5 @@ label:focus {
 tooltip {
     background-color: @base;
     border: 3px solid @surface0;
+    border-radius: 15px;
 }
