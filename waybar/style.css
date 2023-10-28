@@ -24,7 +24,7 @@
 #mode, #clock, #memory, #temperature, #cpu,
 #mpd, #backlight, #pulseaudio, #network, 
 #battery, #custom-media, #scratchpad, #disk {
-  padding: 0 1rem 0 1rem;
+  padding: 0 .6rem 0 .6rem;
   background-color: @surface0;
 }
 
@@ -37,16 +37,10 @@
 /* Left group modules */
 #cpu, #pulseaudio {
   border-radius: 1.2rem 0 0 1.2rem;
-  margin-right: -.3rem;
-}
-/* Central group modules */
-#memory, #network {
-  margin: 0 -.3rem 0 -.3rem;
 }
 /* Right group modules */
 #temperature, #battery {
   border-radius: 0 1.2rem 1.2rem 0;
-  margin-left: -.3rem;
 }
 
 /* Bar */
@@ -61,11 +55,6 @@ window#waybar {
   transition-property: background-color;
   transition-duration: .5s;
 }
-
-/* window > box {
-  margin: .3rem;
-  margin-bottom: 0;
-} */
 
 
 /* Workspaces */
