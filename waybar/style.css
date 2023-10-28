@@ -13,7 +13,7 @@
   }
 }
 
-.warning, .critical, .urgent {
+.critical, .urgent {
   animation-name: blink_red;
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -67,7 +67,7 @@ window#waybar {
 #workspaces button {
   color: @text;
   background-color: transparent;
-  padding: .1rem .6rem .1rem .6rem;
+  padding: .1rem .4rem .1rem .4rem;
   border-radius: 1.2rem;
 }
 
@@ -87,17 +87,20 @@ tooltip label {
 
 /* battery */
 #battery {
-  color: @mauve;
+  color: @teal;
   margin-right: .6rem;
   padding-right: 1.4rem;
 }
 #battery.full {
-  color: @green;
+  color: @mauve;
 }
 #battery.charging{
   color: @yellow;
 }
-#battery.discharging {
+#battery.good {
+  color: @green;
+}
+#battery.warning {
   color: @peach;
 }
 #battery.critical:not(.charging) {
@@ -129,7 +132,7 @@ tooltip label {
   background-color: @surface0;
   color: @text;
   margin-right: .6rem;
-  padding: 0 1.1rem 0 .7rem;
+  padding: 0 1rem 0 .6rem;
 }
 #idle_inhibitor.activated {
   background-color: @text;
@@ -153,7 +156,7 @@ tooltip label {
   padding: 0 .6rem 0 .6rem;
 }
 #disk {
-  color: @peach;
+  color: @red;
 }
 #custom-media {
   color: @text;
