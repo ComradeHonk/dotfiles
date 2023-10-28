@@ -22,22 +22,31 @@
 }
 
 #mode, #clock, #memory, #temperature, #cpu,
-#mpd, #idle_inhibitor, #backlight, #pulseaudio, #network, 
+#mpd, #backlight, #pulseaudio, #network, 
 #battery, #custom-media, #scratchpad, #disk {
-  padding: 0 .6rem 0 .6rem;
+  padding: 0 1rem 0 1rem;
   background-color: @surface0;
 }
 
+/* Gaps and rounded edges between modules */
+/* Separate modules */
 #clock, #idle_inhibitor {
   border-radius: 1.2rem;
 }
 
+/* Left group modules */
 #cpu, #pulseaudio {
   border-radius: 1.2rem 0 0 1.2rem;
+  margin-right: -.3rem;
 }
-
+/* Central group modules */
+#memory, #network {
+  margin: 0 -.3rem 0 -.3rem;
+}
+/* Right group modules */
 #temperature, #battery {
   border-radius: 0 1.2rem 1.2rem 0;
+  margin-left: -.3rem;
 }
 
 /* Bar */
@@ -91,7 +100,7 @@ tooltip label {
 #battery {
   color: @mauve;
   margin-right: .6rem;
-  padding-right: 1.2rem;
+  padding-right: 1.4rem;
 }
 #battery.full {
   color: @green;
@@ -128,6 +137,7 @@ tooltip label {
   color: @lavender;
 }
 #idle_inhibitor {
+  background-color: @surface0;
   color: @text;
   margin-right: .6rem;
   padding: 0 1.1rem 0 .7rem;
