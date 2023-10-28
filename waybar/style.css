@@ -61,7 +61,7 @@ window#waybar {
 #workspaces {
   background-color: @surface0;
   border-radius: 1.2rem;
-  margin-left: .6rem;
+  margin: 0 1.2rem 0 .6rem;
 }
 
 #workspaces button {
@@ -107,16 +107,6 @@ tooltip label {
   color: @red;
 }
 
-/* mpd */
-#mpd.paused {
-  font-style: italic;
-}
-#mpd.stopped {
-  color: @subtext0;
-}
-#mpd {
-  color: @pink;
-}
 
 /* Extra */
 #memory {
@@ -158,9 +148,14 @@ tooltip label {
 #disk {
   color: @red;
 }
-#custom-media {
+
+/* MPRIS */
+#mpris {
   color: @text;
 }
-#custom-media.custom-spotify {
+#mpris.spotify {
   color: @green;
+}
+#mpris.paused {
+  color: @subtext0;
 }
