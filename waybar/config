@@ -3,7 +3,7 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "mpris"],
+    "modules-left": ["hyprland/workspaces", "custom/media"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "temperature", "pulseaudio", "network", "battery"],
     // Modules configuration
@@ -90,18 +90,21 @@
         },
         "on-click": "pavucontrol"
     },
-    "mpris": {
-        "interval": 1,
-	"format": "{player_icon} {player}: {title} - {artist}",
-	"format-paused": "{status_icon} paused: {title} - {artist}",
-	"player-icons": {
-	    "default": "▶",
-	    "spotify": "",
-	    "mpv": "🎵"
-	},
-	"status-icons": {
-	    "paused": "⏸"
-	},
+    "custom/media": {
+        "format": "{icon} {}",
+        "escape": true,
+        "return-type": "json",
+        "max-length": 60,
+	"format-icons": {
+            "spotify": "",
+            "default": ""
+        },
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl stop",
+        "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
     }
 }
 

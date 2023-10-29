@@ -29,8 +29,8 @@
 }
 
 /* Gaps and rounded edges between modules */
-/* Separate modules */
-#clock, #idle_inhibitor {
+/* Standalone modules */
+#clock, #idle_inhibitor, #custom-media {
   border-radius: 1.2rem;
 }
 
@@ -61,7 +61,7 @@ window#waybar {
 #workspaces {
   background-color: @surface0;
   border-radius: 1.2rem;
-  margin: 0 1.2rem 0 .6rem;
+  margin: 0 .6rem 0 .6rem;
 }
 
 #workspaces button {
@@ -149,13 +149,10 @@ tooltip label {
   color: @red;
 }
 
-/* MPRIS */
-#mpris {
-  color: @text;
+/* Custom media */
+#custom-media {
+  color: @pink;
 }
-#mpris.spotify {
+#custom-media.custom-spotify {
   color: @green;
-}
-#mpris.paused {
-  color: @subtext0;
 }
