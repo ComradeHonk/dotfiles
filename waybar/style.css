@@ -21,16 +21,22 @@
   animation-direction: alternate;
 }
 
-#mode, #clock, #memory, #temperature, #cpu,
-#mpd, #backlight, #pulseaudio, #network, 
-#battery, #custom-media, #scratchpad, #disk {
+#clock, #memory, #temperature, #cpu,
+#pulseaudio, #network, #battery, #custom-media {
   padding: 0 .6rem 0 .6rem;
   background-color: @surface0;
 }
 
+#custom-lock, #custom-reboot, #custom-quit {
+  padding: 0 .8rem 0 .7rem;
+  background-color: @surface0;
+  margin-right: .6rem;
+}
+
 /* Gaps and rounded edges between modules */
 /* Standalone modules */
-#clock, #idle_inhibitor, #custom-media {
+#clock, #idle_inhibitor, #custom-media, #custom-power,
+#custom-lock, #custom-reboot, #custom-quit {
   border-radius: 1.2rem;
 }
 
@@ -39,7 +45,7 @@
   border-radius: 1.2rem 0 0 1.2rem;
 }
 /* Right group modules */
-#temperature, #battery {
+#temperature, #network {
   border-radius: 0 1.2rem 1.2rem 0;
 }
 
@@ -88,8 +94,7 @@ tooltip label {
 /* battery */
 #battery {
   color: @teal;
-  margin-right: .6rem;
-  padding-right: 1.4rem;
+  padding-right: 1rem;
 }
 #battery.full {
   color: @mauve;
@@ -102,7 +107,7 @@ tooltip label {
 }
 #battery.charging {
   color: @yellow;
-  padding-right: .6rem;
+  padding-right: .4rem;
 }
 #battery.critical:not(.charging) {
   color: @red;
@@ -138,6 +143,8 @@ tooltip label {
 }
 #network {
   color: @blue;
+  margin-right: .6rem;
+  padding-right: 1rem;
 }
 #network.disconnected {
   color: @subtext0;
@@ -150,10 +157,26 @@ tooltip label {
   color: @red;
 }
 
-/* Custom media */
+/* Custom - mediaplayer */
 #custom-media {
   color: @pink;
 }
 #custom-media.custom-spotify {
   color: @green;
+}
+
+/* Custom - powermenu */
+#custom-power {
+  background-color: @red;
+  color: @base;
+  padding: 0 .85rem 0 .6rem;
+}
+#custom-reboot {
+  color: @green;
+}
+#custom-lock {
+  color: @yellow;
+}
+#custom-quit {
+  color: @blue;
 }

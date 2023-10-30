@@ -3,9 +3,25 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "custom/media"],
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/media"
+    ],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "temperature", "pulseaudio", "network", "battery"],
+    "modules-right": [
+        "tray",
+        "idle_inhibitor",
+        "cpu",
+        "memory",
+        "temperature",
+        "pulseaudio",
+        "battery",
+        "network",
+        "custom/lock",
+        "custom/quit",
+        "custom/reboot",
+        "custom/power"
+    ],
     // Modules configuration
     "hyprland/workspaces": {
     //     "all-outputs": true,
@@ -51,26 +67,6 @@
         "format-icons": ["", "", ""],
 	"tooltip": false
     },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 40,
-            "critical": 20
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
@@ -90,11 +86,31 @@
         },
         "on-click": "pavucontrol"
     },
+    "battery": {
+        "states": {
+            "good": 90,
+            "warning": 40,
+            "critical": 20
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
     "custom/media": {
         "format": "{icon} {}",
         "escape": true,
         "return-type": "json",
-        "max-length": 60,
+        "max-length": 80,
 	"format-icons": {
             "spotify": "",
             "default": ""
@@ -104,7 +120,27 @@
         "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    },
+    "custom/lock": {
+        "format": "󰍁",
+        "tooltip": false,
+        "on-click": "swaylock"
+    },
+    "custom/quit": {
+        "format": "󰗼",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "poweroff"
     }
 }
 
