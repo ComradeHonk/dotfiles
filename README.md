@@ -12,14 +12,14 @@ State of the theme configs for each package. Most packages didn't need modificat
 - [btop](https://github.com/catppuccin/btop) - Default config (deleted unused theme files)
 - [fish](https://github.com/catppuccin/fish) - Default config (deleted unused theme files)
 - [gitui](https://github.com/catppuccin/gitui) - Default config (deleted unused theme files)
-- [hypr](https://github.com/catppuccin/hyprland) - Default config, applied manually in `hyprland.conf`
+- [hypr](https://github.com/catppuccin/hyprland) - Colors applied manually in `hyprland.conf`
 - [kitty](https://github.com/catppuccin/kitty) - Default config
 - [mako](https://github.com/catppuccin/mako) - Default config (to be modified)
-- [qt5ct](https://github.com/catppuccin/qt5ct) - Default config (to be modified)
+- [qt5ct](https://github.com/catppuccin/qt5ct) - Changed accent color to green
 - [rofi](https://github.com/catppuccin/rofi) - Deathemonic version. I'm using only the launcher, because I dont't need a runner, power menu or screenshot tool. I also had some problems with icons in those modules. I modified colors in `colors.rasi` to exactly match Catppuccin Mocha colors.
 - [starship](https://github.com/catppuccin/starship) - Default config
 - [swaylock](https://github.com/remiposo/swaylock) - Default config by [remiposo](https://github.com/remiposo). Labeled as WIP
-- [waybar](https://github.com/catppuccin/waybar) - Default config, applied manually in `style.css`
+- [waybar](https://github.com/catppuccin/waybar) - Colors applied manually in `style.css`
 - [zellij](https://github.com/catppuccin/zellij) - Default config
 
 ## Current config status
@@ -39,7 +39,7 @@ When I complete modifications or plan new ones, I will update statuses according
 | hypr      | ⚠️ WIP         |
 | kitty     | ⚠️ WIP         |
 | mako      | ⚠️ WIP         |
-| qt5ct     | ⚠️ WIP         |
+| qt5ct     | ✅️ Complete   |
 | rofi      | ✅️ Complete   |
 | starship  | ⚠️ WIP         |
 | swaylock* | ✅️ Complete   |
