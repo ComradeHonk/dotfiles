@@ -14,7 +14,7 @@ State of the theme configs for each package. Most packages didn't need modificat
 - [gitui](https://github.com/catppuccin/gitui) - Default config (deleted unused theme files)
 - [hypr](https://github.com/catppuccin/hyprland) - Colors applied manually in `hyprland.conf`
 - [kitty](https://github.com/catppuccin/kitty) - Default config
-- [mako](https://github.com/catppuccin/mako) - Default config (to be modified)
+- [mako](https://github.com/catppuccin/mako) - Changed border color and radius, added 5s timeout
 - [qt5ct](https://github.com/catppuccin/qt5ct) - Changed accent color to green
 - [rofi](https://github.com/catppuccin/rofi) - Deathemonic version. I'm using only the launcher, because I dont't need a runner, power menu or screenshot tool. I also had some problems with icons in those modules. I modified colors in `colors.rasi` to exactly match Catppuccin Mocha colors.
 - [starship](https://github.com/catppuccin/starship) - Default config
@@ -38,7 +38,7 @@ When I complete modifications or plan new ones, I will update statuses according
 | gitui     | ✅️ Complete   |
 | hypr      | ⚠️ WIP         |
 | kitty     | ⚠️ WIP         |
-| mako      | ⚠️ WIP         |
+| mako      | ✅️ Complete   |
 | qt5ct     | ✅️ Complete   |
 | rofi      | ✅️ Complete   |
 | starship  | ⚠️ WIP         |
