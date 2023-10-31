@@ -21,7 +21,7 @@
   animation-direction: alternate;
 }
 
-#clock, #memory, #temperature, #cpu,
+#clock, #memory, #temperature, #cpu, #custom-gpu,
 #pulseaudio, #network, #battery, #custom-media {
   padding: 0 .6rem 0 .6rem;
   background-color: @surface0;
@@ -45,7 +45,7 @@
   border-radius: 1.2rem 0 0 1.2rem;
 }
 /* Right group modules */
-#temperature, #network {
+#custom-gpu, #network {
   border-radius: 0 1.2rem 1.2rem 0;
 }
 
@@ -117,6 +117,7 @@ tooltip label {
 /* Extra */
 #memory {
   color: @green;
+  padding-right: .4rem;
 }
 #cpu {
   color: @sapphire;
@@ -136,7 +137,7 @@ tooltip label {
 }
 #temperature {
   color: @yellow;
-  margin-right: .6rem;
+  padding-right: .4rem;
 }
 #pulseaudio {
   color: @maroon;
@@ -179,4 +180,9 @@ tooltip label {
 }
 #custom-quit {
   color: @blue;
+}
+
+#custom-gpu {
+  color: @peach;
+  margin-right: .6rem;
 }

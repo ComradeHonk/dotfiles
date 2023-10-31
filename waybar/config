@@ -14,6 +14,7 @@
         "cpu",
         "memory",
         "temperature",
+	"custom/gpu",
         "pulseaudio",
         "battery",
         "network",
@@ -37,6 +38,26 @@
     //        "default": ""
     //    }
     },
+    "custom/media": {
+        "format": "{icon} {}",
+        "escape": true,
+        "return-type": "json",
+        "max-length": 50,
+	"format-icons": {
+            "spotify": "",
+            "default": ""
+        },
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl stop",
+        "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -48,24 +69,27 @@
         // "icon-size": 21,
         "spacing": 10
     },
-    "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+	"interval": 5
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+	"interval": 5
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""],
+        "format-icons": ["", "", ""],
 	"tooltip": false
+    },
+    "custom/gpu": {
+        "exec": "radeontop -d - -l 1 | tr -d '\n' | cut -s -d ',' -f3 | cut -s -d ' ' -f3 | cut -s -d '.' -f1",
+        "format": "{}% ",
+        "interval": 5
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -105,22 +129,6 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "custom/media": {
-        "format": "{icon} {}",
-        "escape": true,
-        "return-type": "json",
-        "max-length": 80,
-	"format-icons": {
-            "spotify": "",
-            "default": ""
-        },
-        "on-click": "playerctl play-pause",
-        "on-click-right": "playerctl stop",
-        "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous",
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
     },
     "custom/lock": {
         "format": "󰍁",
