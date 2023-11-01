@@ -10,6 +10,7 @@ State of the theme configs for each package. Most packages didn't need modificat
 
 - [bat](https://github.com/catppuccin/bat) - Default config (deleted unused theme files)
 - [btop](https://github.com/catppuccin/btop) - Default config (deleted unused theme files)
+- [cava](https://github.com/catppuccin/cava) - Default config
 - [fish](https://github.com/catppuccin/fish) - Default config (deleted unused theme files)
 - [gitui](https://github.com/catppuccin/gitui) - Default config (deleted unused theme files)
 - [hypr](https://github.com/catppuccin/hyprland) - Colors applied manually in `hyprland.conf`
@@ -34,6 +35,7 @@ When I complete modifications or plan new ones, I will update statuses according
 |-----------|---------------|
 | bat       | ✅️ Complete   |
 | btop      | ✅️ Complete   |
+| cava      | ✅️ Complete   |
 | fish      | ✅️ Complete   |
 | gitui     | ✅️ Complete   |
 | hypr      | ⚠️ WIP         |
