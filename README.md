@@ -39,7 +39,7 @@ When I complete modifications or plan new ones, I will update statuses according
 | fish      | ✅️ Complete   |
 | gitui     | ✅️ Complete   |
 | hypr      | ⚠️ WIP         |
-| kitty     | ⚠️ WIP         |
+| kitty     | ✅️ Complete   |
 | mako      | ✅️ Complete   |
 | qt5ct     | ✅️ Complete   |
 | rofi      | ✅️ Complete   |
