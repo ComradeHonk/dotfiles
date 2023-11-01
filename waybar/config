@@ -108,7 +108,8 @@
     "custom/gpu": {
         "exec": "radeontop -d - -l 1 | tr -d '\n' | cut -s -d ',' -f3 | cut -s -d ' ' -f3 | cut -s -d '.' -f1",
         "format": "{}% ",
-        "interval": 5
+        "interval": 5,
+	"tooltip": false
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
