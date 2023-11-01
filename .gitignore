@@ -7,6 +7,8 @@
 
 !/bat/
 !/btop/
+!/cava/
+cava/shaders
 !/fish/
 !/gitui/
 !/hypr/
