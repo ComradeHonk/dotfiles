@@ -44,7 +44,7 @@ When I complete modifications or plan new ones, I will update statuses according
 | starship  | ⚠️ WIP         |
 | swaylock* | ✅️ Complete   |
 | swayidle  | ✅️ Complete   |
-| waybar    | ⚠️ WIP         |
+| waybar    | ✅️ Complete   |
 | zellij    | ✅️ Complete   |
 
 \* \- [swaylock config](https://github.com/remiposo/swaylock) by [remiposo](https://github.com/remiposo) is labeled as **WIP**
