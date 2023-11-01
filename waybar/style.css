@@ -36,7 +36,7 @@
 /* Gaps and rounded edges between modules */
 /* Standalone modules */
 #clock, #idle_inhibitor, #custom-power, #custom-media,
-#custom-lock, #custom-reboot, #custom-quit {
+#custom-lock, #custom-reboot, #custom-quit, #custom-arch {
   border-radius: 1.2rem;
 }
 
@@ -67,7 +67,7 @@ window#waybar {
 #workspaces {
   background-color: @surface0;
   border-radius: 1.2rem;
-  margin: 0 .6rem 0 .6rem;
+  margin-right: .6rem;
 }
 
 #workspaces button {
@@ -173,6 +173,7 @@ tooltip label {
   background-color: @red;
   color: @base;
   padding: 0 .85rem 0 .6rem;
+  margin-right: .6rem;
 }
 #custom-reboot {
   color: @green;
@@ -187,4 +188,11 @@ tooltip label {
 #custom-gpu {
   color: @peach;
   margin-right: .6rem;
+}
+
+#custom-arch {
+  background-color: @sapphire;
+  color: @base;
+  padding: 0 .85rem 0 .6rem;
+  margin: 0 .6rem 0 .6rem;
 }

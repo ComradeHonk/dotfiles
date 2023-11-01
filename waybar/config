@@ -4,6 +4,7 @@
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/arch",
         "hyprland/workspaces",
         "custom/media",
 	"cava"
@@ -25,6 +26,10 @@
         "custom/power"
     ],
     // Modules configuration
+    "custom/arch": {
+        "format": "󰣇",
+	"tooltip": false
+    },
     "hyprland/workspaces": {
     //     "all-outputs": true,
         "format": "{name}",
