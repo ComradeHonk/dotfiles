@@ -35,7 +35,7 @@
 
 /* Gaps and rounded edges between modules */
 /* Standalone modules */
-#clock, #idle_inhibitor, #custom-media, #custom-power,
+#clock, #idle_inhibitor, #custom-power, #custom-media,
 #custom-lock, #custom-reboot, #custom-quit {
   border-radius: 1.2rem;
 }
@@ -154,16 +154,18 @@ tooltip label {
   margin-right: .6rem;
   padding: 0 .6rem 0 .6rem;
 }
-#disk {
-  color: @red;
-}
 
 /* Custom - mediaplayer */
 #custom-media {
   color: @pink;
+  margin-right: .6rem;
 }
 #custom-media.custom-spotify {
   color: @green;
+}
+
+#cava {
+  color: @sky;
 }
 
 /* Custom - powermenu */
