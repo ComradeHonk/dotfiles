@@ -166,6 +166,7 @@ tooltip label {
 
 #cava {
   color: @sky;
+  padding: 0 .6rem 0 .6rem;
 }
 
 /* Custom - powermenu */
