@@ -28,7 +28,7 @@
 }
 
 #custom-lock, #custom-reboot, #custom-quit {
-  padding: 0 .8rem 0 .7rem;
+  padding: 0 .7rem 0 .65rem;
   background-color: @surface0;
   margin-right: .6rem;
 }
@@ -129,7 +129,7 @@ tooltip label {
   background-color: @surface0;
   color: @text;
   margin-right: .6rem;
-  padding: 0 .9rem 0 .5rem;
+  padding: 0 .85rem 0 .45rem;
 }
 #idle_inhibitor.activated {
   background-color: @text;
@@ -141,11 +141,11 @@ tooltip label {
 }
 #pulseaudio {
   color: @maroon;
+  padding-right: .3rem;
 }
 #network {
   color: @blue;
   margin-right: .6rem;
-  padding-right: 1rem;
 }
 #network.disconnected {
   color: @subtext0;
@@ -173,7 +173,7 @@ tooltip label {
 #custom-power {
   background-color: @red;
   color: @base;
-  padding: 0 .85rem 0 .6rem;
+  padding: 0 .8rem 0 .5rem;
   margin-right: .6rem;
 }
 #custom-reboot {
@@ -194,6 +194,6 @@ tooltip label {
 #custom-arch {
   background-color: @sapphire;
   color: @base;
-  padding: 0 .85rem 0 .6rem;
+  padding: 0 .75rem 0 .55rem;
   margin: 0 .6rem 0 .6rem;
 }
