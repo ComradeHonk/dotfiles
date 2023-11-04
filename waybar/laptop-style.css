@@ -1,0 +1,199 @@
+@import "mocha.css";
+
+/* Global */
+* {
+  font-family: "FiraCode Nerd Font";
+  font-size: .9rem;
+}
+
+@keyframes blink_red {
+  to {
+    background-color: @red;
+    color: @text;
+  }
+}
+
+.critical, .urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#clock, #memory, #temperature, #cpu, #custom-gpu,
+#pulseaudio, #network, #battery, #custom-media {
+  padding: 0 .6rem 0 .6rem;
+  background-color: @surface0;
+}
+
+#custom-lock, #custom-reboot, #custom-quit {
+  padding: 0 .8rem 0 .7rem;
+  background-color: @surface0;
+  margin-right: .6rem;
+}
+
+/* Gaps and rounded edges between modules */
+/* Standalone modules */
+#clock, #idle_inhibitor, #custom-power, #custom-media,
+#custom-lock, #custom-reboot, #custom-quit, #custom-arch {
+  border-radius: 1.2rem;
+}
+
+/* Left group modules */
+#cpu, #pulseaudio {
+  border-radius: 1.2rem 0 0 1.2rem;
+}
+/* Right group modules */
+#custom-gpu, #network {
+  border-radius: 0 1.2rem 1.2rem 0;
+}
+
+/* Bar */
+/* Ignore Catppuccin GTK theme that's breaking the bar */
+window {
+  all: initial;
+}
+
+window#waybar {
+  background-color: shade(@base, 0.9);
+  border: 2px solid alpha(@crust, 0.3);
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+
+/* Workspaces */
+#workspaces {
+  background-color: @surface0;
+  border-radius: 1.2rem;
+  margin-right: .6rem;
+}
+
+#workspaces button {
+  color: @text;
+  background-color: transparent;
+  padding: .1rem .4rem .1rem .4rem;
+  border-radius: 1.2rem;
+}
+
+#workspaces button.active {
+  background-color: @green;
+  color: @base;
+}
+
+/* Tooltip */
+tooltip {
+  background-color: @base;
+}
+
+tooltip label {
+  color: @rosewater;
+}
+
+/* battery */
+#battery {
+  color: @teal;
+  padding-right: 1rem;
+}
+#battery.full {
+  color: @mauve;
+}
+#battery.good {
+  color: @green;
+}
+#battery.warning {
+  color: @peach;
+}
+#battery.charging {
+  color: @yellow;
+  padding-right: .4rem;
+}
+#battery.critical:not(.charging) {
+  color: @red;
+}
+
+
+/* Extra */
+#memory {
+  color: @green;
+  padding-right: .4rem;
+}
+#cpu {
+  color: @sapphire;
+}
+#clock {
+  color: @lavender;
+}
+#idle_inhibitor {
+  background-color: @surface0;
+  color: @text;
+  margin-right: .6rem;
+  padding: 0 .9rem 0 .5rem;
+}
+#idle_inhibitor.activated {
+  background-color: @text;
+  color: @base;
+}
+#temperature {
+  color: @yellow;
+  padding-right: .4rem;
+}
+#pulseaudio {
+  color: @maroon;
+}
+#network {
+  color: @blue;
+  margin-right: .6rem;
+  padding-right: 1rem;
+}
+#network.disconnected {
+  color: @subtext0;
+}
+#tray {
+  margin-right: .6rem;
+  padding: 0 .6rem 0 .6rem;
+}
+
+/* Custom - mediaplayer */
+#custom-media {
+  color: @pink;
+  margin-right: .6rem;
+}
+#custom-media.custom-spotify {
+  color: @green;
+}
+
+#cava {
+  color: @sky;
+  padding: 0 .6rem 0 .6rem;
+}
+
+/* Custom - powermenu */
+#custom-power {
+  background-color: @red;
+  color: @base;
+  padding: 0 .85rem 0 .6rem;
+  margin-right: .6rem;
+}
+#custom-reboot {
+  color: @green;
+}
+#custom-lock {
+  color: @yellow;
+}
+#custom-quit {
+  color: @blue;
+}
+
+#custom-gpu {
+  color: @peach;
+  margin-right: .6rem;
+}
+
+#custom-arch {
+  background-color: @sapphire;
+  color: @base;
+  padding: 0 .85rem 0 .6rem;
+  margin: 0 .6rem 0 .6rem;
+}

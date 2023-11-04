@@ -18,6 +18,7 @@
         "temperature",
 	"custom/gpu",
         "pulseaudio",
+        "battery",
         "network",
         "custom/lock",
         "custom/quit",
