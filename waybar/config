@@ -19,7 +19,6 @@
         "idle_inhibitor",
         "cpu",
         "memory",
-        "temperature",
 	"custom/gpu",
         "pulseaudio",
         "network",
