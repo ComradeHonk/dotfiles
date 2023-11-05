@@ -5,6 +5,8 @@ text-color=#cdd6f4
 border-color=#a6e3a1
 border-radius=8
 progress-color=over #313244
+
+font=FiraCodeNerdFont 10
 default-timeout=5000
 
 [urgency=high]
