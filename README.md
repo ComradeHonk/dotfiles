@@ -1,5 +1,7 @@
 # ComradeHonk's dotfiles
 
+⚠️ Warning! I'm no longer maintaining this repo. It only exists for reference. I'll be deleting it soon!
+
 ## Introduction
 
 This repo contains configuration files for my [Hyprland](https://hyprland.org) ricing project using [Catppuccin](https://github.com/catppuccin/catppuccin) Mocha theme. You may use my configuration, but in the current state it's mostly copied from Catppuccin's GitHub.
